@@ -1,1 +1,15 @@
-<h1>hola</h1>
+<div class="contenedor-principal">
+  <app-cabecera></app-cabecera>
+  <div class="contenedor-cuerpo">
+    <div class="contenedor-cuerpo-izquierda">
+      <app-listado (usuarioSelecionadoRespuesta)="seleccionaUsuario($event)" [usuariosPadre]="usuarios"></app-listado>
+      <app-botonera [usuariosPadre]="usuarios"></app-botonera>
+    </div>
+    <div class="contenedor-cuerpo-centro" >
+      <app-contenido-datos [usuarioSeleccionadoPadre]="usuarioSeleccionado"></app-contenido-datos>
+    </div>
+    <div class="contenedor-cuerpo-derecha">
+      <app-mapa></app-mapa>
+    </div>
+  </div>
+</div>

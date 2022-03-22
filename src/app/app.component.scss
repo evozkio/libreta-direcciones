@@ -1,0 +1,24 @@
+.contenedor-principal{
+    overflow-y: hidden;
+    height: 100vh;
+    background-color: red;
+    display: grid;
+    grid-template-rows: 50px 1fr;
+    .contenedor-cuerpo{
+        background-color: greenyellow;
+        display: grid;
+        grid-template-columns: 300px 1fr 1fr;
+        .contenedor-cuerpo-izquierda{
+            background-color: darkblue;
+            display: grid;
+            grid-template-rows: 1fr 50px;
+        }
+        .contenedor-cuerpo-centro{
+            background-color: coral;
+            padding: 5px;
+        }
+        .contenedor-cuerpo-derecho{
+            background-color: chocolate;
+        }
+    }
+}

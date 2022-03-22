@@ -1,0 +1,11 @@
+.contenedor-principal{
+    height: 100%;
+    display: grid;
+    grid-template-rows: 50px 1fr;
+    .contenedor-buscador{
+        background-color: rgb(98, 0, 255);
+    }
+    .contenedor-lista-usuario{
+        background-color: rgb(153, 201, 202);
+    }
+}

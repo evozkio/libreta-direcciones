@@ -1,0 +1,11 @@
+.contenedor-principal{
+    height: 100%;
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    .contenedor-separador{
+        display: flex;
+        justify-content: space-between;
+    }
+}
