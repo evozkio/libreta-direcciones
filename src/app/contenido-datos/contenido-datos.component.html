@@ -1,68 +1,70 @@
-<div class="contenedor-principal">
-    <div class="contenedor-separador">
-        <div class="nombre">
-            <label>Nombre:</label>
-            <div class="input-group">
-                <input class="form-control form-control-sm" type="text" value="{{usuarioSeleccionadoPadre.nombre}}" readonly>
-            </div>
-        </div>
-        <div class="apellidos">
-            <label>Apellidos:</label>
-            <div class="input-group">
-                <input class="form-control form-control-sm" type="text" value="{{usuarioSeleccionadoPadre.apellidos}}" readonly>
-            </div>
-        </div>
-        <div class="email">
-            <label>Email:</label>
-            <div class="input-group">
-                <input class="form-control form-control-sm" type="text" value="{{usuarioSeleccionadoPadre.email}}" readonly>
-            </div>
+<div class="contenedor-separador">
+    <div class="nombre">
+        <label>Nombre:</label>
+        <div class="input-group">
+            <input class="form-control form-control-sm" type="text" value="{{usuarioSeleccionadoPadre.nombre}}" (change)="inputNombre($event.target)" >
         </div>
     </div>
-    <div class="contenedor-separador">
-        <div class="telefono">
-            <label>Telefono:</label>
-            <div class="input-group">
-                <input class="form-control form-control-sm" type="text" value="{{usuarioSeleccionadoPadre.telefono}}" readonly>
-            </div>
-        </div>
-        <div class="direccion">
-            <label>Dirección:</label>
-            <div class="input-group">
-                <input class="form-control form-control-sm" type="text" value="{{usuarioSeleccionadoPadre.direccion}}" readonly>
-            </div>
-        </div>
-        <div class="codigo_postal">
-            <label>Codigo Postal:</label>
-            <div class="input-group">
-                <input class="form-control form-control-sm" type="text" value="{{usuarioSeleccionadoPadre.codigo_postal}}" readonly>
-            </div>
+    <div class="apellidos">
+        <label>Apellidos:</label>
+        <div class="input-group">
+            <input class="form-control form-control-sm" type="text" value="{{usuarioSeleccionadoPadre.apellidos}}" (change)="inputApellidos">
         </div>
     </div>
-    <div class="contenedor-separador">
-                <div class="poblacion">
-            <label>Población:</label>
-            <div class="input-group">
-                <input class="form-control form-control-sm" type="text" value="{{usuarioSeleccionadoPadre.poblacion}}" readonly>
-            </div>
+</div>
+<div class="contenedor-separador">
+    <div class="email">
+        <label>Email:</label>
+        <div class="input-group">
+            <input class="form-control form-control-sm" type="text" value="{{usuarioSeleccionadoPadre.email}}"  (change)="inputEmail">
         </div>
-        <div class="provincia">
-            <label>Provicia:</label>
-            <div class="input-group">
-                <input class="form-control form-control-sm" type="text" value="{{usuarioSeleccionadoPadre.provincia}}" readonly>
-            </div>
+    </div>
+    <div class="telefono">
+        <label>Telefono:</label>
+        <div class="input-group">
+            <input class="form-control form-control-sm" type="text" value="{{usuarioSeleccionadoPadre.telefono}}"  (change)="inputTelefono">
         </div>
-        <div class="profesion">
-            <label>Profesión:</label>
-            <div class="input-group">
-                <input class="form-control form-control-sm" type="text" value="{{usuarioSeleccionadoPadre.profesion}}" readonly>
-            </div>
+    </div>
+</div>
+<div class="contenedor-separador">
+    <div class="direccion">
+        <label>Dirección:</label>
+        <div class="input-group">
+            <input class="form-control form-control-sm" type="text" value="{{usuarioSeleccionadoPadre.direccion}}"  (change)="inputDireccion">
+        </div>
+    </div>
+    <div class="codigo_postal">
+        <label>Codigo Postal:</label>
+        <div class="input-group">
+            <input class="form-control form-control-sm" type="text" value="{{usuarioSeleccionadoPadre.codigo_postal}}"  (change)="inputCodigoPostal">
+        </div>
+    </div>
+</div>
+<div class="contenedor-separador">
+            <div class="poblacion">
+        <label>Población:</label>
+        <div class="input-group">
+            <input class="form-control form-control-sm" type="text" value="{{usuarioSeleccionadoPadre.poblacion}}"  (change)="inputPoblacion">
+        </div>
+    </div>
+    <div class="provincia">
+        <label>Provicia:</label>
+        <div class="input-group">
+            <input class="form-control form-control-sm" type="text" value="{{usuarioSeleccionadoPadre.provincia}}"  (change)="inputProvincia">
+        </div>
+    </div>
+</div>
+<div class="contenedor-separador">
+    <div class="profesion">
+        <label>Profesión:</label>
+        <div class="input-group">
+            <input class="form-control form-control-sm" type="text" value="{{usuarioSeleccionadoPadre.profesion}}"  (change)="inputProfesion">
         </div>
     </div>
     <div class="notas">
         <label>Notas:</label>
         <div class="input-group">
-            <input class="form-control form-control-sm" value="{{usuarioSeleccionadoPadre.notas}}" readonly> 
+            <input class="form-control form-control-sm" value="{{usuarioSeleccionadoPadre.notas}}"  (change)="inputNotas"> 
         </div>
     </div>
 </div>

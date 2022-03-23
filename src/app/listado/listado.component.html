@@ -1,12 +1,9 @@
-<div class="contenedor-principal">
-    <div class="contenedor-buscador">
-        <div class="contenedor_inputBuscador">
-            <input class="form-control text_buscador" type="text" [(ngModel)]="valorBuscador" placeholder="Busca..." id="inputBuscador" />
-            <button class="btn btn-outline-primary boton_buscador" (click)="buscar()">Buscar</button>
-        </div>
-
+<div class="contenedor-buscador">
+    <div class="contenedor_inputBuscador">
+        <input class="form-control text_buscador" type="text" [(ngModel)]="valorBuscador" placeholder="Busca..." id="inputBuscador" />
+        <button class="btn btn-outline-primary boton_buscador" (click)="buscar()">Buscar</button>
     </div>
-    <div class="contenedor-lista-usuario">
-            <button class="btn btn-outline-dark" *ngFor="let item of filtro_Productos; let i = index" (click)="muestraUsuario(i)">{{item.nombre}}</button>
-    </div>
+</div>
+<div class="contenedor-lista-usuario">
+    <button class="btn btn-outline-dark" *ngFor="let item of filtro_Usuarios; let i = index" (click)="muestraUsuario(i)">{{item.nombre}}</button>
 </div>

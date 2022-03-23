@@ -1,12 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'libreta-direcciones';
+export class AppComponent implements OnInit{
+  ngOnInit(): void {
+    this.usuarioSeleccionado = this.usuarios[0];
+  }
 
   usuarios :any[] = [
     {
@@ -46,6 +48,366 @@ export class AppComponent {
       "notas": "amigo"
     },
     {
+      "nombre" : "Cesar",
+      "apellidos" : "Mesa",
+      "email": "cesarcomando@gmail.com",
+      "telefono": "222222222",
+      "direccion": "pepino nº24",
+      "codigo_postal": "23456",
+      "poblacion": "Espartinas",
+      "provincia": "Sevilla",
+      "profesion": "fontanero",
+      "notas": "amigo"
+    },
+    {
+      "nombre" : "Cesar",
+      "apellidos" : "Mesa",
+      "email": "cesarcomando@gmail.com",
+      "telefono": "222222222",
+      "direccion": "pepino nº24",
+      "codigo_postal": "23456",
+      "poblacion": "Espartinas",
+      "provincia": "Sevilla",
+      "profesion": "fontanero",
+      "notas": "amigo"
+    },
+    {
+      "nombre" : "Cesar",
+      "apellidos" : "Mesa",
+      "email": "cesarcomando@gmail.com",
+      "telefono": "222222222",
+      "direccion": "pepino nº24",
+      "codigo_postal": "23456",
+      "poblacion": "Espartinas",
+      "provincia": "Sevilla",
+      "profesion": "fontanero",
+      "notas": "amigo"
+    },
+    {
+      "nombre" : "Cesar",
+      "apellidos" : "Mesa",
+      "email": "cesarcomando@gmail.com",
+      "telefono": "222222222",
+      "direccion": "pepino nº24",
+      "codigo_postal": "23456",
+      "poblacion": "Espartinas",
+      "provincia": "Sevilla",
+      "profesion": "fontanero",
+      "notas": "amigo"
+    },
+    {
+      "nombre" : "Cesar",
+      "apellidos" : "Mesa",
+      "email": "cesarcomando@gmail.com",
+      "telefono": "222222222",
+      "direccion": "pepino nº24",
+      "codigo_postal": "23456",
+      "poblacion": "Espartinas",
+      "provincia": "Sevilla",
+      "profesion": "fontanero",
+      "notas": "amigo"
+    },
+    {
+      "nombre" : "Cesar",
+      "apellidos" : "Mesa",
+      "email": "cesarcomando@gmail.com",
+      "telefono": "222222222",
+      "direccion": "pepino nº24",
+      "codigo_postal": "23456",
+      "poblacion": "Espartinas",
+      "provincia": "Sevilla",
+      "profesion": "fontanero",
+      "notas": "amigo"
+    },
+    {
+      "nombre" : "Cesar",
+      "apellidos" : "Mesa",
+      "email": "cesarcomando@gmail.com",
+      "telefono": "222222222",
+      "direccion": "pepino nº24",
+      "codigo_postal": "23456",
+      "poblacion": "Espartinas",
+      "provincia": "Sevilla",
+      "profesion": "fontanero",
+      "notas": "amigo"
+    },
+    {
+      "nombre" : "Cesar",
+      "apellidos" : "Mesa",
+      "email": "cesarcomando@gmail.com",
+      "telefono": "222222222",
+      "direccion": "pepino nº24",
+      "codigo_postal": "23456",
+      "poblacion": "Espartinas",
+      "provincia": "Sevilla",
+      "profesion": "fontanero",
+      "notas": "amigo"
+    },
+    {
+      "nombre" : "Cesar",
+      "apellidos" : "Mesa",
+      "email": "cesarcomando@gmail.com",
+      "telefono": "222222222",
+      "direccion": "pepino nº24",
+      "codigo_postal": "23456",
+      "poblacion": "Espartinas",
+      "provincia": "Sevilla",
+      "profesion": "fontanero",
+      "notas": "amigo"
+    },
+    {
+      "nombre" : "Cesar",
+      "apellidos" : "Mesa",
+      "email": "cesarcomando@gmail.com",
+      "telefono": "222222222",
+      "direccion": "pepino nº24",
+      "codigo_postal": "23456",
+      "poblacion": "Espartinas",
+      "provincia": "Sevilla",
+      "profesion": "fontanero",
+      "notas": "amigo"
+    },
+    {
+      "nombre" : "Cesar",
+      "apellidos" : "Mesa",
+      "email": "cesarcomando@gmail.com",
+      "telefono": "222222222",
+      "direccion": "pepino nº24",
+      "codigo_postal": "23456",
+      "poblacion": "Espartinas",
+      "provincia": "Sevilla",
+      "profesion": "fontanero",
+      "notas": "amigo"
+    },
+    {
+      "nombre" : "Cesar",
+      "apellidos" : "Mesa",
+      "email": "cesarcomando@gmail.com",
+      "telefono": "222222222",
+      "direccion": "pepino nº24",
+      "codigo_postal": "23456",
+      "poblacion": "Espartinas",
+      "provincia": "Sevilla",
+      "profesion": "fontanero",
+      "notas": "amigo"
+    },
+    {
+      "nombre" : "Cesar",
+      "apellidos" : "Mesa",
+      "email": "cesarcomando@gmail.com",
+      "telefono": "222222222",
+      "direccion": "pepino nº24",
+      "codigo_postal": "23456",
+      "poblacion": "Espartinas",
+      "provincia": "Sevilla",
+      "profesion": "fontanero",
+      "notas": "amigo"
+    },
+    {
+      "nombre" : "Cesar",
+      "apellidos" : "Mesa",
+      "email": "cesarcomando@gmail.com",
+      "telefono": "222222222",
+      "direccion": "pepino nº24",
+      "codigo_postal": "23456",
+      "poblacion": "Espartinas",
+      "provincia": "Sevilla",
+      "profesion": "fontanero",
+      "notas": "amigo"
+    },
+    {
+      "nombre" : "Cesar",
+      "apellidos" : "Mesa",
+      "email": "cesarcomando@gmail.com",
+      "telefono": "222222222",
+      "direccion": "pepino nº24",
+      "codigo_postal": "23456",
+      "poblacion": "Espartinas",
+      "provincia": "Sevilla",
+      "profesion": "fontanero",
+      "notas": "amigo"
+    },
+    {
+      "nombre" : "Cesar",
+      "apellidos" : "Mesa",
+      "email": "cesarcomando@gmail.com",
+      "telefono": "222222222",
+      "direccion": "pepino nº24",
+      "codigo_postal": "23456",
+      "poblacion": "Espartinas",
+      "provincia": "Sevilla",
+      "profesion": "fontanero",
+      "notas": "amigo"
+    },
+    {
+      "nombre" : "Cesar",
+      "apellidos" : "Mesa",
+      "email": "cesarcomando@gmail.com",
+      "telefono": "222222222",
+      "direccion": "pepino nº24",
+      "codigo_postal": "23456",
+      "poblacion": "Espartinas",
+      "provincia": "Sevilla",
+      "profesion": "fontanero",
+      "notas": "amigo"
+    },
+    {
+      "nombre" : "Cesar",
+      "apellidos" : "Mesa",
+      "email": "cesarcomando@gmail.com",
+      "telefono": "222222222",
+      "direccion": "pepino nº24",
+      "codigo_postal": "23456",
+      "poblacion": "Espartinas",
+      "provincia": "Sevilla",
+      "profesion": "fontanero",
+      "notas": "amigo"
+    },
+    {
+      "nombre" : "Cesar",
+      "apellidos" : "Mesa",
+      "email": "cesarcomando@gmail.com",
+      "telefono": "222222222",
+      "direccion": "pepino nº24",
+      "codigo_postal": "23456",
+      "poblacion": "Espartinas",
+      "provincia": "Sevilla",
+      "profesion": "fontanero",
+      "notas": "amigo"
+    },
+    {
+      "nombre" : "Cesar",
+      "apellidos" : "Mesa",
+      "email": "cesarcomando@gmail.com",
+      "telefono": "222222222",
+      "direccion": "pepino nº24",
+      "codigo_postal": "23456",
+      "poblacion": "Espartinas",
+      "provincia": "Sevilla",
+      "profesion": "fontanero",
+      "notas": "amigo"
+    },
+    {
+      "nombre" : "Cesar",
+      "apellidos" : "Mesa",
+      "email": "cesarcomando@gmail.com",
+      "telefono": "222222222",
+      "direccion": "pepino nº24",
+      "codigo_postal": "23456",
+      "poblacion": "Espartinas",
+      "provincia": "Sevilla",
+      "profesion": "fontanero",
+      "notas": "amigo"
+    },
+    {
+      "nombre" : "Cesar",
+      "apellidos" : "Mesa",
+      "email": "cesarcomando@gmail.com",
+      "telefono": "222222222",
+      "direccion": "pepino nº24",
+      "codigo_postal": "23456",
+      "poblacion": "Espartinas",
+      "provincia": "Sevilla",
+      "profesion": "fontanero",
+      "notas": "amigo"
+    },
+    {
+      "nombre" : "Cesar",
+      "apellidos" : "Mesa",
+      "email": "cesarcomando@gmail.com",
+      "telefono": "222222222",
+      "direccion": "pepino nº24",
+      "codigo_postal": "23456",
+      "poblacion": "Espartinas",
+      "provincia": "Sevilla",
+      "profesion": "fontanero",
+      "notas": "amigo"
+    },
+    {
+      "nombre" : "Cesar",
+      "apellidos" : "Mesa",
+      "email": "cesarcomando@gmail.com",
+      "telefono": "222222222",
+      "direccion": "pepino nº24",
+      "codigo_postal": "23456",
+      "poblacion": "Espartinas",
+      "provincia": "Sevilla",
+      "profesion": "fontanero",
+      "notas": "amigo"
+    },
+    {
+      "nombre" : "Cesar",
+      "apellidos" : "Mesa",
+      "email": "cesarcomando@gmail.com",
+      "telefono": "222222222",
+      "direccion": "pepino nº24",
+      "codigo_postal": "23456",
+      "poblacion": "Espartinas",
+      "provincia": "Sevilla",
+      "profesion": "fontanero",
+      "notas": "amigo"
+    },
+    {
+      "nombre" : "Cesar",
+      "apellidos" : "Mesa",
+      "email": "cesarcomando@gmail.com",
+      "telefono": "222222222",
+      "direccion": "pepino nº24",
+      "codigo_postal": "23456",
+      "poblacion": "Espartinas",
+      "provincia": "Sevilla",
+      "profesion": "fontanero",
+      "notas": "amigo"
+    },
+    {
+      "nombre" : "Cesar",
+      "apellidos" : "Mesa",
+      "email": "cesarcomando@gmail.com",
+      "telefono": "222222222",
+      "direccion": "pepino nº24",
+      "codigo_postal": "23456",
+      "poblacion": "Espartinas",
+      "provincia": "Sevilla",
+      "profesion": "fontanero",
+      "notas": "amigo"
+    },
+    {
+      "nombre" : "Cesar",
+      "apellidos" : "Mesa",
+      "email": "cesarcomando@gmail.com",
+      "telefono": "222222222",
+      "direccion": "pepino nº24",
+      "codigo_postal": "23456",
+      "poblacion": "Espartinas",
+      "provincia": "Sevilla",
+      "profesion": "fontanero",
+      "notas": "amigo"
+    },
+    {
+      "nombre" : "Cesar",
+      "apellidos" : "Mesa",
+      "email": "cesarcomando@gmail.com",
+      "telefono": "222222222",
+      "direccion": "pepino nº24",
+      "codigo_postal": "23456",
+      "poblacion": "Espartinas",
+      "provincia": "Sevilla",
+      "profesion": "fontanero",
+      "notas": "amigo"
+    },
+    {
+      "nombre" : "Cesar",
+      "apellidos" : "Mesa",
+      "email": "cesarcomando@gmail.com",
+      "telefono": "222222222",
+      "direccion": "pepino nº24",
+      "codigo_postal": "23456",
+      "poblacion": "Espartinas",
+      "provincia": "Sevilla",
+      "profesion": "fontanero",
+      "notas": "amigo"
+    },
+    {
       "nombre" : "Fatima",
       "apellidos" : "de la Cruz",
       "email": "fatima@gmail.com",
@@ -57,11 +419,82 @@ export class AppComponent {
       "profesion": "camionero",
       "notas": "amigo"
     }
-  ]
+  ];
 
-  usuarioSeleccionado :any;
+  title = 'libreta-direcciones';
+  
+  usuarioSeleccionado :any ;
+  datosUsuarioCambiar:any;
+  posicion:any;
+
+  
+  cambiosLista(cambio:any){
+    switch(cambio) { 
+      case 'crear': { 
+        this.crear();
+        break; 
+      } 
+      case 'borrar': { 
+        this.eliminar();
+        break; 
+      } 
+      case 'modificar': { 
+        this.modificar();
+        break; 
+      }  
+    }   
+  }
+
+  datosUsuarioModificar(usuario:any){
+    this.datosUsuarioCambiar = usuario;
+  }
   
   seleccionaUsuario(usuario:any){
     this.usuarioSeleccionado = usuario;
+    this.posicion = this.usuarios.indexOf(this.usuarioSeleccionado);
+    console.log(this.posicion);
   }
+
+  crear(){
+    let nuevo_usuario = {
+     "nombre" : "Cesar",
+     "apellidos" : "Gómez",
+     "email": "cesargomez@gmail.com",
+     "telefono": "222222222",
+     "direccion": "pepino nº24",
+     "codigo_postal": "23456",
+     "poblacion": "Espartinas",
+     "provincia": "Sevilla",
+     "profesion": "fontanero",
+     "notas": "amigo"
+   }
+   this.usuarios.push(nuevo_usuario);
+ }
+
+ eliminar(){
+  this.usuarios.splice(this.usuarios.indexOf(this.usuarioSeleccionado),1)
+
+ }
+
+ modificar(){
+   console.log(this.usuarioSeleccionado);
+   console.log(this.datosUsuarioCambiar)
+  //  this.usuarios[this.usuarios.indexOf(this.usuarioSeleccionado)]=this.datosUsuarioCambiar;
+   let nuevo_usuario = {
+    "nombre" : this.datosUsuarioCambiar.nombre,
+    "apellidos" : this.datosUsuarioCambiar.apellidos,
+    "email": this.datosUsuarioCambiar.email,
+    "telefono": this.datosUsuarioCambiar.telefono,
+    "direccion": this.datosUsuarioCambiar.direccion,
+    "codigo_postal": this.datosUsuarioCambiar.codigo_postal,
+    "poblacion": this.datosUsuarioCambiar.poblacion,
+    "provincia": this.datosUsuarioCambiar.provincia,
+    "profesion": this.datosUsuarioCambiar.profesion,
+    "notas": this.datosUsuarioCambiar.notas
+  }
+  this.usuarios[this.posicion]=nuevo_usuario;
+ }
+  
+
+ 
 }

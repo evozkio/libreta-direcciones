@@ -1,15 +1,18 @@
 <div class="contenedor-principal">
-  <app-cabecera></app-cabecera>
+  <app-cabecera class="contenedor-cabecera"></app-cabecera>
   <div class="contenedor-cuerpo">
     <div class="contenedor-cuerpo-izquierda">
-      <app-listado (usuarioSelecionadoRespuesta)="seleccionaUsuario($event)" [usuariosPadre]="usuarios"></app-listado>
-      <app-botonera [usuariosPadre]="usuarios"></app-botonera>
+      <app-listado class="contenedor-listado" [usuarios]="usuarios" (usuarioSelecionadoRespuesta)="seleccionaUsuario($event)"></app-listado>
+      <app-botonera (cambiosListaRespuesta)="cambiosLista($event)"></app-botonera>
     </div>
     <div class="contenedor-cuerpo-centro" >
-      <app-contenido-datos [usuarioSeleccionadoPadre]="usuarioSeleccionado"></app-contenido-datos>
+      <app-contenido-datos class="contenedor-contenido-datos" 
+      [usuarioSeleccionadoPadre]="usuarioSeleccionado" 
+      (datosModificar)="datosUsuarioModificar($event)"
+      ></app-contenido-datos>
     </div>
     <div class="contenedor-cuerpo-derecha">
-      <app-mapa></app-mapa>
+      <app-mapa class="contenedor-mapa"></app-mapa>
     </div>
   </div>
 </div>

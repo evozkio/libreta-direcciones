@@ -4,20 +4,48 @@
     background-color: red;
     display: grid;
     grid-template-rows: 50px 1fr;
+    .contenedor-cabecera{
+        height: 100%;
+        background-color: aqua;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+    }
     .contenedor-cuerpo{
+        height: 100%;
         background-color: greenyellow;
         display: grid;
         grid-template-columns: 300px 1fr 1fr;
+        overflow: hidden;
         .contenedor-cuerpo-izquierda{
+            overflow: hidden;
+            height: 100%;
             background-color: darkblue;
             display: grid;
             grid-template-rows: 1fr 50px;
+            .contenedor-listado{
+               height: 100%; 
+               overflow: hidden;
+               display: grid;
+               grid-template-rows: 50px 1fr;
+            }
         }
         .contenedor-cuerpo-centro{
+            height: 100%;
             background-color: coral;
             padding: 5px;
+            overflow: hidden;
+            .contenedor-contenido-datos{
+                padding-left: 10px;
+                height: 100%;
+                background-color: green;
+                display: flex;
+                flex-direction: column;
+                overflow-y: auto;
+            }
         }
         .contenedor-cuerpo-derecho{
+            height: 100%;
             background-color: chocolate;
         }
     }

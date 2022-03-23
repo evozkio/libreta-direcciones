@@ -6,34 +6,32 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./listado.component.scss']
 })
 export class ListadoComponent implements OnInit {
-  @Input ()usuariosPadre:any;
   @Output() usuarioSelecionadoRespuesta : EventEmitter<any> = new EventEmitter;
+  @Input () usuarios:any;
   valorBuscador='';
-  filtro_Productos:any;
+  filtro_Usuarios:any;
 
   ngOnInit(): void {
-    this.usuarioSelecionadoRespuesta.emit(this.usuariosPadre[0])
-    this.filtro_Productos= this.usuariosPadre;
+    this.filtro_Usuarios= this.usuarios;
   }
 
   buscar(){
     let palabra: string = this.valorBuscador;
-    this.filtro_Productos= [];
+    this.filtro_Usuarios= [];
 
     if(palabra){
-      for (var val of this.usuariosPadre) {   
+      for (var val of this.usuarios) {   
         if (val.nombre.toLowerCase().indexOf(palabra.toLowerCase())>=0){
-          this.filtro_Productos.push(val)
+          this.filtro_Usuarios.push(val)
         }
       }
     }
     else{
-      this.filtro_Productos=this.usuariosPadre;
+      this.filtro_Usuarios=this.usuarios;
     }
   }
 
   muestraUsuario(index:number){
-    this.usuarioSelecionadoRespuesta.emit(this.usuariosPadre[index]);
+    this.usuarioSelecionadoRespuesta.emit(this.filtro_Usuarios[index]);
   }
-
 }
