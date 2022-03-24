@@ -2,14 +2,14 @@
   <app-cabecera class="contenedor-cabecera"></app-cabecera>
   <div class="contenedor-cuerpo">
     <div class="contenedor-cuerpo-izquierda">
-      <app-listado class="contenedor-listado" [usuarios]="usuarios" (usuarioSelecionadoRespuesta)="seleccionaUsuario($event)"></app-listado>
-      <app-botonera (cambiosListaRespuesta)="cambiosLista($event)"></app-botonera>
+      <div class="contenido-cuerpo-izquierda">    
+        <app-listado class="contenedor-listado" [usuarios]="usuarios" (usuarioSelecionadoRespuesta)="seleccionaUsuario($event)"></app-listado>
+        <app-botonera (cambiosListaRespuesta)="cambiosLista($event)"></app-botonera>
+      </div>
     </div>
     <div class="contenedor-cuerpo-centro" >
       <app-contenido-datos class="contenedor-contenido-datos" 
-      [usuarioSeleccionadoPadre]="usuarioSeleccionado" 
-      [UsuarioModificarInput]="usuarioModificar" 
-      (UsuarioModificarOutput)="datosUsuarioModificar($event)"
+      [usuarioModificarInput]="usuarioModificar" 
       ></app-contenido-datos>
     </div>
     <div class="contenedor-cuerpo-derecha">

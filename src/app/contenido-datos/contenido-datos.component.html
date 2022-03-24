@@ -2,14 +2,14 @@
     <div class="nombre">
         <label>Nombre:</label>
         <div class="input-group">
-            <input class="form-control form-control-sm" type="text" value="{{usuarioSeleccionadoPadre.nombre}}"
+            <input class="form-control form-control-sm" type="text" value="{{usuarioModificarInput.nombre}}"
                 (change)="inputNombre($event.target)">
         </div>
     </div>
     <div class="apellidos">
         <label>Apellidos:</label>
         <div class="input-group">
-            <input class="form-control form-control-sm" type="text" value="{{usuarioSeleccionadoPadre.apellidos}}"
+            <input class="form-control form-control-sm" type="text" value="{{usuarioModificarInput.apellidos}}"
                 (change)="inputApellidos($event.target)">
         </div>
     </div>
@@ -18,14 +18,14 @@
     <div class="email">
         <label>Email:</label>
         <div class="input-group">
-            <input class="form-control form-control-sm" type="text" value="{{usuarioSeleccionadoPadre.email}}"
+            <input class="form-control form-control-sm" type="text" value="{{usuarioModificarInput.email}}"
                 (change)="inputEmail($event.target)">
         </div>
     </div>
     <div class="telefono">
         <label>Telefono:</label>
         <div class="input-group">
-            <input class="form-control form-control-sm" type="text" value="{{usuarioSeleccionadoPadre.telefono}}"
+            <input class="form-control form-control-sm" type="text" value="{{usuarioModificarInput.telefono}}"
                 (change)="inputTelefono($event.target)">
         </div>
     </div>
@@ -34,14 +34,14 @@
     <div class="direccion">
         <label>Dirección:</label>
         <div class="input-group">
-            <input class="form-control form-control-sm" type="text" value="{{usuarioSeleccionadoPadre.direccion}}"
+            <input class="form-control form-control-sm" type="text" value="{{usuarioModificarInput.direccion}}"
                 (change)="inputDireccion($event.target)">
         </div>
     </div>
     <div class="codigo_postal">
         <label>Codigo Postal:</label>
         <div class="input-group">
-            <input class="form-control form-control-sm" type="text" value="{{usuarioSeleccionadoPadre.codigo_postal}}"
+            <input class="form-control form-control-sm" type="text" value="{{usuarioModificarInput.codigo_postal}}"
                 (change)="inputCodigoPostal($event.target)">
         </div>
     </div>
@@ -50,14 +50,14 @@
     <div class="poblacion">
         <label>Población:</label>
         <div class="input-group">
-            <input class="form-control form-control-sm" type="text" value="{{usuarioSeleccionadoPadre.poblacion}}"
+            <input class="form-control form-control-sm" type="text" value="{{usuarioModificarInput.poblacion}}"
                 (change)="inputPoblacion($event.target)">
         </div>
     </div>
     <div class="provincia">
         <label>Provicia:</label>
         <div class="input-group">
-            <input class="form-control form-control-sm" type="text" value="{{usuarioSeleccionadoPadre.provincia}}"
+            <input class="form-control form-control-sm" type="text" value="{{usuarioModificarInput.provincia}}"
                 (change)="inputProvincia($event.target)">
         </div>
     </div>
@@ -66,21 +66,21 @@
     <div class="profesion">
         <label>Profesión:</label>
         <div class="input-group">
-            <input class="form-control form-control-sm" type="text" value="{{usuarioSeleccionadoPadre.profesion}}"
+            <input class="form-control form-control-sm" type="text" value="{{usuarioModificarInput.profesion}}"
                 (change)="inputProfesion($event.target)">
         </div>
     </div>
     <div class="notas">
         <label>Notas:</label>
         <div class="input-group">
-            <input class="form-control form-control-sm" value="{{usuarioSeleccionadoPadre.notas}}"
+            <input class="form-control form-control-sm" value="{{usuarioModificarInput.notas}}"
                 (change)="inputNotas($event.target)">
         </div>
     </div>
 </div>
 
 
-<div style="background-color: azure;">
+<div style="background-color: azure; margin-top: 20px;">
     <label>usuarioCambiar</label>
-    {{UsuarioModificarInput|json}}
+    {{usuarioModificarInput|json}}
 </div>

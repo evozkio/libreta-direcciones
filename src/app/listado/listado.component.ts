@@ -1,37 +1,27 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-listado',
   templateUrl: './listado.component.html',
   styleUrls: ['./listado.component.scss']
 })
-export class ListadoComponent implements OnInit {
+export class ListadoComponent{
   @Output() usuarioSelecionadoRespuesta : EventEmitter<any> = new EventEmitter;
   @Input () usuarios:any;
   valorBuscador='';
-  filtro_Usuarios:any;
-
-  ngOnInit(): void {
-    this.filtro_Usuarios= this.usuarios;
-  }
 
   buscar(){
-    let palabra: string = this.valorBuscador;
-    this.filtro_Usuarios= [];
-
-    if(palabra){
-      for (var val of this.usuarios) {   
-        if (val.nombre.toLowerCase().indexOf(palabra.toLowerCase())>=0){
-          this.filtro_Usuarios.push(val)
-        }
-      }
+    if(!this.valorBuscador){
+      this.valorBuscador='';
     }
-    else{
-      this.filtro_Usuarios=this.usuarios;
+    for (var val of this.usuarios) {   
+      if (val.nombre.toLowerCase().indexOf(this.valorBuscador.toLowerCase())>=0){
+
+      }
     }
   }
 
   muestraUsuario(index:number){
-    this.usuarioSelecionadoRespuesta.emit(this.filtro_Usuarios[index]);
+    this.usuarioSelecionadoRespuesta.emit(index);
   }
 }

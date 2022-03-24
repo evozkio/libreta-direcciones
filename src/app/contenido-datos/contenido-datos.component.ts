@@ -8,50 +8,37 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class ContenidoDatosComponent {
  
 
-  @Input ()usuarioSeleccionadoPadre:any;
-  @Input ()UsuarioModificarInput:any;
-
-  @Output () UsuarioModificarOutput: EventEmitter<any> = new EventEmitter;
+  @Input ()usuarioModificarInput:any;
 
 
   inputNombre(nombre:any):void{
-    this.UsuarioModificarInput.nombre = nombre.value;
-    this.UsuarioModificarOutput.emit(this.UsuarioModificarInput);
+    this.usuarioModificarInput.nombre = nombre.value;
   }
   inputApellidos(apellidos:any):void{
-    this.UsuarioModificarInput.apellidos = apellidos.value;
-    this.UsuarioModificarOutput.emit(this.UsuarioModificarInput);
+    this.usuarioModificarInput.apellidos = apellidos.value;
   }
   inputEmail(email:any):void{
-    this.UsuarioModificarInput.email = email.value;
-    this.UsuarioModificarOutput.emit(this.UsuarioModificarInput);
+    this.usuarioModificarInput.email = email.value;
   }
   inputTelefono(telefono:any):void{
-    this.UsuarioModificarInput.telefono = telefono.value;
-    this.UsuarioModificarOutput.emit(this.UsuarioModificarInput);
+    this.usuarioModificarInput.telefono = telefono.value;
   }
   inputDireccion(direccion:any):void{
-    this.UsuarioModificarInput.direccion = direccion.value;
-    this.UsuarioModificarOutput.emit(this.UsuarioModificarInput);
+    this.usuarioModificarInput.direccion = direccion.value;
   }
   inputCodigoPostal(codigo_postal:any):void{
-    this.UsuarioModificarInput.codigo_postal = codigo_postal.value;
-    this.UsuarioModificarOutput.emit(this.UsuarioModificarInput);
+    this.usuarioModificarInput.codigo_postal = codigo_postal.value;
   }
   inputPoblacion(poblacion:any):void{
-    this.UsuarioModificarInput.poblacion = poblacion.value;
-    this.UsuarioModificarOutput.emit(this.UsuarioModificarInput);
+    this.usuarioModificarInput.poblacion = poblacion.value;
   }
   inputProvincia(provincia:any):void{
-    this.UsuarioModificarInput.provincia = provincia.value;
-    this.UsuarioModificarOutput.emit(this.UsuarioModificarInput);
+    this.usuarioModificarInput.provincia = provincia.value;
   }
   inputProfesion(profesion:any):void{
-    this.UsuarioModificarInput.profesion = profesion.value;
-    this.UsuarioModificarOutput.emit(this.UsuarioModificarInput);
+    this.usuarioModificarInput.profesion = profesion.value;
   }
   inputNotas(notas:any):void{
-    this.UsuarioModificarInput.notas = notas.value;
-    this.UsuarioModificarOutput.emit(this.UsuarioModificarInput);
+    this.usuarioModificarInput.notas = notas.value;
   }
 }

@@ -6,10 +6,6 @@ import { Component, OnInit} from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit{
-  ngOnInit(): void {
-    this.usuarioSeleccionado = this.usuarios[0];
-    this.usuarioModificar = Object.assign({},this.usuarios[0]);
-  }
 
   usuarios :any[] = [
     {
@@ -206,14 +202,15 @@ export class AppComponent implements OnInit{
     }
   ];
 
-
-
-  title = 'libreta-direcciones';
-  sePuedeModificar:boolean = true;
+  sePuedeEliminar:boolean = true;
   usuarioSeleccionado :any ;
   usuarioModificar:any;
-  posicion:any;
 
+  ngOnInit(): void {
+    this.usuarioSeleccionado = [0];
+    this.usuarioModificar = Object.assign({},this.usuarios[0]);
+    this.sePuedeEliminar = true;
+  }
   
   cambiosLista(cambio:any){
     switch(cambio) { 
@@ -231,17 +228,11 @@ export class AppComponent implements OnInit{
       }  
     }   
   }
-
-  datosUsuarioModificar(usuario:any){
-    this.usuarioModificar = usuario;
-    this.sePuedeModificar=true;
-  }
   
-  seleccionaUsuario(usuario:any){
-    this.usuarioSeleccionado = usuario;
-    this.posicion = this.usuarios.indexOf(this.usuarioSeleccionado);
-    this.sePuedeModificar=false;
-    this.usuarioModificar = Object.assign({},this.usuarioSeleccionado);
+  seleccionaUsuario(posicion:any){
+    this.usuarioSeleccionado = posicion;
+    this.usuarioModificar = Object.assign({},this.usuarios[this.usuarioSeleccionado]);
+    this.sePuedeEliminar = true;
   }
 
   crear(){
@@ -249,14 +240,12 @@ export class AppComponent implements OnInit{
   }
 
   eliminar(){
-   this.usuarios.splice(this.usuarios.indexOf(this.usuarioSeleccionado),1)
+    if(this.sePuedeEliminar)
+    this.usuarios.splice(this.usuarios[this.usuarioSeleccionado],1)
+    this.sePuedeEliminar = false;
   }
   
   modificar(){
-    if(this.sePuedeModificar)
-    this.usuarios[this.posicion]=this.usuarioModificar;
+    this.usuarios[this.usuarioSeleccionado]=this.usuarioModificar;
   }
-    
-
- 
 }

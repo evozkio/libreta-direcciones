@@ -1,44 +1,56 @@
 .contenedor-principal{
+    font-family: Jazz LET;
     overflow-y: hidden;
     height: 100vh;
-    background-color: red;
+    padding: 5px;
     display: grid;
     grid-template-rows: 50px 1fr;
     .contenedor-cabecera{
         height: 100%;
-        background-color: aqua;
         display: flex;
         align-items: center;
         justify-content: center; 
     }
     .contenedor-cuerpo{
         height: 100%;
-        background-color: greenyellow;
+        // background-color: greenyellow;
         display: grid;
         grid-template-columns: 300px 1fr 1fr;
+        gap: 10px;
         overflow: hidden;
         .contenedor-cuerpo-izquierda{
             overflow: hidden;
             height: 100%;
-            background-color: darkblue;
-            display: grid;
-            grid-template-rows: 1fr 50px;
-            .contenedor-listado{
-               height: 100%; 
-               overflow: hidden;
-               display: grid;
-               grid-template-rows: 50px 1fr;
+            padding: 5px;
+            .contenido-cuerpo-izquierda{
+                overflow: hidden;
+                height: 100%;
+                border-radius: 10px;
+                padding: 5px;
+                background-color: rgba(0, 0, 139, 0.39);
+                box-shadow: 5px 5px lightblue;
+                display: grid;
+                grid-template-rows: 1fr 50px;
+                .contenedor-listado{
+                    height: 100%; 
+                    overflow: hidden;
+                    display: grid;
+                    grid-template-rows: 50px 1fr;
+                }
             }
         }
+
         .contenedor-cuerpo-centro{
             height: 100%;
-            background-color: coral;
             padding: 5px;
             overflow: hidden;
             .contenedor-contenido-datos{
                 padding-left: 10px;
+                padding-right: 10px;
                 height: 100%;
-                background-color: green;
+                border-radius: 10px;
+                background-color: rgba(255, 127, 80, 0.726);
+                box-shadow: 5px 5px lightblue;
                 display: flex;
                 flex-direction: column;
                 overflow-y: auto;
@@ -46,7 +58,6 @@
         }
         .contenedor-cuerpo-derecho{
             height: 100%;
-            background-color: chocolate;
         }
     }
 }
