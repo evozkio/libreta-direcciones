@@ -9,60 +9,49 @@ export class ContenidoDatosComponent {
  
 
   @Input ()usuarioSeleccionadoPadre:any;
-  @Output () datosModificar : EventEmitter<any> = new EventEmitter;
-  usuario = {
-    "nombre" : "",
-    "apellidos" : "",
-    "email": "",
-    "telefono": "",
-    "direccion": "",
-    "codigo_postal": "",
-    "poblacion": "",
-    "provincia": "",
-    "profesion": "",
-    "notas": ""
-  };
+  @Input ()UsuarioModificarInput:any;
 
+  @Output () UsuarioModificarOutput: EventEmitter<any> = new EventEmitter;
 
 
   inputNombre(nombre:any):void{
-    this.usuario.nombre = nombre.value;
-    this.datosModificar.emit(this.usuario);
+    this.UsuarioModificarInput.nombre = nombre.value;
+    this.UsuarioModificarOutput.emit(this.UsuarioModificarInput);
   }
-  inputApellidos(apellidos:string){
-    this.usuario.apellidos = apellidos;
-    this.datosModificar.emit(this.usuario);
+  inputApellidos(apellidos:any):void{
+    this.UsuarioModificarInput.apellidos = apellidos.value;
+    this.UsuarioModificarOutput.emit(this.UsuarioModificarInput);
   }
-  inputEmail(email:string){
-    this.usuario.email = email;
-    this.datosModificar.emit(this.usuario);
+  inputEmail(email:any):void{
+    this.UsuarioModificarInput.email = email.value;
+    this.UsuarioModificarOutput.emit(this.UsuarioModificarInput);
   }
-  inputTelefono(telefono:string){
-    this.usuario.telefono = telefono;
-    this.datosModificar.emit(this.usuario);
+  inputTelefono(telefono:any):void{
+    this.UsuarioModificarInput.telefono = telefono.value;
+    this.UsuarioModificarOutput.emit(this.UsuarioModificarInput);
   }
-  inputDireccion(direccion:string){
-    this.usuario.direccion = direccion;
-    this.datosModificar.emit(this.usuario);
+  inputDireccion(direccion:any):void{
+    this.UsuarioModificarInput.direccion = direccion.value;
+    this.UsuarioModificarOutput.emit(this.UsuarioModificarInput);
   }
-  inputCodigoPostal(codigo_postal:string){
-    this.usuario.codigo_postal = codigo_postal;
-    this.datosModificar.emit(this.usuario);
+  inputCodigoPostal(codigo_postal:any):void{
+    this.UsuarioModificarInput.codigo_postal = codigo_postal.value;
+    this.UsuarioModificarOutput.emit(this.UsuarioModificarInput);
   }
-  inputPoblacion(poblacion:string){
-    this.usuario.poblacion = poblacion;
-    this.datosModificar.emit(this.usuario);
+  inputPoblacion(poblacion:any):void{
+    this.UsuarioModificarInput.poblacion = poblacion.value;
+    this.UsuarioModificarOutput.emit(this.UsuarioModificarInput);
   }
-  inputProvincia(provincia:string){
-    this.usuario.provincia = provincia;
-    this.datosModificar.emit(this.usuario);
+  inputProvincia(provincia:any):void{
+    this.UsuarioModificarInput.provincia = provincia.value;
+    this.UsuarioModificarOutput.emit(this.UsuarioModificarInput);
   }
-  inputProfesion(profesion:string){
-    this.usuario.profesion = profesion;
-    this.datosModificar.emit(this.usuario);
+  inputProfesion(profesion:any):void{
+    this.UsuarioModificarInput.profesion = profesion.value;
+    this.UsuarioModificarOutput.emit(this.UsuarioModificarInput);
   }
-  inputNotas(notas:string){
-    this.usuario.notas = notas;
-    this.datosModificar.emit(this.usuario);
+  inputNotas(notas:any):void{
+    this.UsuarioModificarInput.notas = notas.value;
+    this.UsuarioModificarOutput.emit(this.UsuarioModificarInput);
   }
 }
