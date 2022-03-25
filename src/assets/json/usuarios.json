@@ -1,0 +1,12 @@
+{
+  "nombre" : "",
+  "apellidos" : "",
+  "email": "",
+  "telefono": "",
+  "direccion": "",
+  "codigo_postal": "",
+  "poblacion": "",
+  "provincia": "",
+  "profesion": "",
+  "notas": ""
+}
