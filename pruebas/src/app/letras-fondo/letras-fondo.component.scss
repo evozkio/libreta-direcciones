@@ -1,0 +1,19 @@
+*{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    // font-weight: 500;
+    font-size: 10vw;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  
+  p{
+      background: url('https://i.gifer.com/origin/d9/d9dd657cfef3fb5188596ace989a7dd7_w200.webp');
+    //   -webkit-background-clip: text;
+      background-size: 100%;
+      -webkit-text-fill-color: transparent;
+      background-repeat: no-repeat;
+      background-position-y: center;
+  }

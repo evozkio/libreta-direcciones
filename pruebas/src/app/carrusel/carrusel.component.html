@@ -1,0 +1,13 @@
+
+    <div class="contenedor-principal" [style.witdh]="ancho" [style.height]="alto" [style.background-color]="colorFondo">
+      <div class="todo" id="contenedor-carrusel">
+        <div class="cajas" *ngFor="let item of lista; index as i; " [style]=anchoCaja()  id="{{listaIds[i]}}">
+          <div class="contenido" [ngClass]="{'centro': i == centro}">
+            <img src={{item.image}}>
+            <p>{{item.familia}} </p>
+          </div>
+        </div>
+      </div>
+      <div class="boton boton-izquierda" [style.background-color]="colorBoton" (click)="animacion(true)"></div>
+      <div class="boton boton-derecha" [style.background-color]="colorBoton" (click)="animacion(false)"></div>
+    </div>

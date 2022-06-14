@@ -1,0 +1,68 @@
+div {
+  position: relative;
+  width: 120px;
+  div::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: red;
+    animation: linea 1s ease forwards;
+
+    
+  }
+  &:hover {
+    div::after {
+        animation: linea-hover 1s ease forwards;
+    }
+  }
+}
+
+@keyframes linea {
+  0% {
+    -webkit-transform-origin: left;
+    transform-origin: left;
+  }
+  40% {
+    -webkit-transform-origin: left;
+    transform-origin: left;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+  }
+  50% {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: right;
+    transform-origin: right;
+  }
+  100% {
+    -webkit-transform-origin: right;
+    transform-origin: right;
+  }
+}
+
+@keyframes linea-hover {
+  0% {
+    -webkit-transform-origin: right;
+    transform-origin: right;
+  }
+  40% {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: right;
+    transform-origin: right;
+  }
+  50% {
+    -webkit-transform-origin: left;
+    transform-origin: left;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+  }
+  100% {
+    -webkit-transform-origin: left;
+    transform-origin: left;
+  }
+}

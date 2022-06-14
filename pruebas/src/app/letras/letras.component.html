@@ -1,0 +1,8 @@
+<div style="height: 100px; width: 100%;">
+    <p *ngIf = "activo">
+        <span *ngFor="let item of array_palabra; index as i;" [ngStyle]="{'animation-delay': (i*500)+'ms'}">{{item}}</span> 
+    </p>
+
+</div>
+
+<button (click)="activo = !activo"> hola</button>

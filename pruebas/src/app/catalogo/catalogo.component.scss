@@ -1,0 +1,63 @@
+.main {
+  position: relative;
+  background-color: red;
+  height: 300px;
+  width: 500px;
+  .circulo-animation {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: blue;
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+    width: 90px;
+    top: 50px;
+    left: 300px;
+    border-radius: 50%;
+    background-color: blue;
+    transition: all 1s;
+  }
+  &:hover {
+    .circulo-animation {
+        height: 100%;
+        width: 100%;
+        border-radius: 0;
+        top: 0;
+        left: 0;
+    }
+  }
+}
+
+@keyframes item-hover {
+  0% {
+    left: 0;
+    top: 0;
+    clip-path: circle(100% at 50% 50%);
+  }
+  50% {
+      left: 0px;
+      top: 0px;
+  }
+  100% {
+    left: 50px;
+    top: -50px;
+    clip-path: circle(10% at 50% 50%);
+  }
+}
+@keyframes item-hover-off {
+  0% {
+    left: 50px;
+    top: -50px;
+    clip-path: circle(10% at 50% 50%);
+  }
+  40% {
+    left: 0;
+    top: 0;
+  }
+  100% {
+    left: 0;
+    top: 0;
+    clip-path: circle(100% at 50% 50%);
+  }
+}
