@@ -1,0 +1,10 @@
+<div class="contenedor-principal">
+    <ng-container *ngFor="let index of [0,1,2]">
+        <div class="cuadrado" *ngFor="let numero of listaGanadores[index]" (click)="pulsarCuadrado(numero-1,index)" [style.color]="color(numero,index)">{{tablero[index][numero-1]}}</div>
+    </ng-container>
+</div>
+
+<div class="ganador" *ngIf="ganador !=  '' ">
+    <h1>{{ganador}}</h1>
+    <div class="reiniciar" (click)="reiniciar()">Reinciar</div>
+</div>
